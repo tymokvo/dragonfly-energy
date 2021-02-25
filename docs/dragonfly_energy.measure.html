@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dragonfly_energy.measure module &#8212; dragonfly-energy  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dragonfly_energy.reopt module" href="dragonfly_energy.reopt.html" />
+    <link rel="prev" title="dragonfly_energy.config module" href="dragonfly_energy.config.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          dragonfly-energy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dragonfly_energy.html">dragonfly_energy package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_energy.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.cli.html">dragonfly_energy.cli package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.cli.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.cli.simulate.html">dragonfly_energy.cli.simulate module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.cli.translate.html">dragonfly_energy.cli.translate module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.cli.html#module-dragonfly_energy.cli">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.opendss.html">dragonfly_energy.opendss package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.opendss.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.lib.html">dragonfly_energy.opendss.lib package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="dragonfly_energy.opendss.lib.transformers.html">dragonfly_energy.opendss.lib.transformers module</a></li>
+<li class="toctree-l7"><a class="reference internal" href="dragonfly_energy.opendss.lib.wires.html">dragonfly_energy.opendss.lib.wires module</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.lib.html#module-dragonfly_energy.opendss.lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.opendss.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.connector.html">dragonfly_energy.opendss.connector module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.junction.html">dragonfly_energy.opendss.junction module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.network.html">dragonfly_energy.opendss.network module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.substation.html">dragonfly_energy.opendss.substation module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.transformer.html">dragonfly_energy.opendss.transformer module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.transformerprop.html">dragonfly_energy.opendss.transformerprop module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.wire.html">dragonfly_energy.opendss.wire module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.opendss.html#module-dragonfly_energy.opendss">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.properties.html">dragonfly_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.properties.building.html">dragonfly_energy.properties.building module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.properties.context.html">dragonfly_energy.properties.context module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.properties.model.html">dragonfly_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.properties.room2d.html">dragonfly_energy.properties.room2d module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.properties.story.html">dragonfly_energy.properties.story module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.properties.html#module-dragonfly_energy.properties">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_energy.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.config.html">dragonfly_energy.config module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">dragonfly_energy.measure module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.reopt.html">dragonfly_energy.reopt module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.run.html">dragonfly_energy.run module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.writer.html">dragonfly_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dragonfly_energy.html">dragonfly_energy package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_energy.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_energy.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.config.html">dragonfly_energy.config module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">dragonfly_energy.measure module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.reopt.html">dragonfly_energy.reopt module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.run.html">dragonfly_energy.run module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.writer.html">dragonfly_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="dragonfly_energy.config.html" title="Previous Chapter: dragonfly_energy.config module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; dragonfly_ene...</span>
+    </a>
+  </li>
+  <li>
+    <a href="dragonfly_energy.reopt.html" title="Next Chapter: dragonfly_energy.reopt module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">dragonfly_ene... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/dragonfly_energy.measure.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dragonfly_energy.html">dragonfly_energy package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_energy.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_energy.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.config.html">dragonfly_energy.config module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">dragonfly_energy.measure module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.reopt.html">dragonfly_energy.reopt module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.run.html">dragonfly_energy.run module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.writer.html">dragonfly_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <div class="section" id="module-dragonfly_energy.measure">
+<span id="dragonfly-energy-measure-module"></span><h1>dragonfly_energy.measure module<a class="headerlink" href="#module-dragonfly_energy.measure" title="Permalink to this headline">¶</a></h1>
+<p>Mange OpenStudio measures that can be mapped to different buildings in a model.</p>
+<dl class="py class">
+<dt id="dragonfly_energy.measure.MapperMeasure">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">dragonfly_energy.measure.</span></code><code class="sig-name descname"><span class="pre">MapperMeasure</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/measure.html#MapperMeasure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.measure.Measure</span></code></p>
+<p>An OpenStudio measure that can be mapped to different buildings in a model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>folder</strong> – Path to the folder in which the measure exists. This folder
+must contain a measure.rb and a measure.xml file. Other files are
+optional.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Properties:</dt><dd><ul class="simple">
+<li><p>folder</p></li>
+<li><p>metadata_file</p></li>
+<li><p>program_file</p></li>
+<li><p>resources_folder</p></li>
+<li><p>identifier</p></li>
+<li><p>display_name</p></li>
+<li><p>description</p></li>
+<li><p>type</p></li>
+<li><p>arguments</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.ToString">
+<code class="sig-name descname"><span class="pre">ToString</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.ToString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.from_dict">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">from_dict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/measure.html#MapperMeasure.from_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a MapperMeasure from a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – A dictionary in the format below.</p></li>
+<li><p><strong>folder</strong> – Path to a destination folder to save the measure files. (Default ‘.’)</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MapperMeasure&quot;</span><span class="p">,</span>
+<span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span>  <span class="c1"># Measure identifer</span>
+<span class="s2">&quot;xml_data&quot;</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span>  <span class="c1"># XML file data as string</span>
+<span class="s2">&quot;rb_data&quot;</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span>  <span class="c1"># Ruby file data as string</span>
+<span class="s2">&quot;resource_data&quot;</span><span class="p">:</span> <span class="p">{},</span>  <span class="c1"># Dictionary of strings for any resource ruby files</span>
+<span class="s2">&quot;argument_values&quot;</span><span class="p">:</span> <span class="p">[],</span>  <span class="c1"># List of values for each of the measure arguments</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.sort_measures">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">sort_measures</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measures</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.sort_measures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort measures according to the order they will be executed by OpenStudio CLI.</p>
+<p>ModelMeasures will be first, followed by EnergyPlusMeasures, followed by
+ReportingMeasures.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.to_dict">
+<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/measure.html#MapperMeasure.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert MapperMeasure to a dictionary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.to_osw_dict">
+<code class="sig-name descname"><span class="pre">to_osw_dict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">full_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/measure.html#MapperMeasure.to_osw_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.to_osw_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a Python dictionary that can be written to an OSW JSON.</p>
+<p>Specifcally, this dictionary can be appended to the “steps” key of the
+OpenStudio Workflow (.osw) JSON dictionary in order to include the measure
+in the workflow.</p>
+<p>Note that this method does not perform any checks to validate that the
+Measure has all required values and only arguments with values will be
+included in the dictionary. Validation should be done seperately with
+the validate method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>full_path</strong> – Boolean to note whether the full path to the measure should
+be written under the ‘measure_dir_name’ key or just the measure
+base name. (Default: False)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.validate">
+<code class="sig-name descname"><span class="pre">validate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raise_exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if all required arguments have values needed for simulation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>raise_exception</strong> – If True, an exception will be raised if there’s a
+required argument and there is no value. Otherwise, False will
+be returned for this case and True will be returned if all
+is correct.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.arguments">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">arguments</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a tuple of MeasureArgument objects for the measure input arguments.</p>
+<p>The value property of these objects can be set in order to specify input
+arguments for the measure.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.description">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">description</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get text for describing what the measure does.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.display_name">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">display_name</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get text for the human-readable display name of the measure.</p>
+<p>This is called the “display_name” in the measure.xml file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.folder">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">folder</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path to the folder in which the measure exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.identifier">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">identifier</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get text for the identifier of the measure.</p>
+<p>This is also called the “name” in the measure.xml file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.metadata_file">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">metadata_file</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.metadata_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path to the measure.xml file within the measure folder.</p>
+<p>This file contains metadata about the measure and this is where many of
+the properties on this object originate from.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.program_file">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">program_file</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.program_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path to the measure.rb file within the measure folder.</p>
+<p>This file contains the Ruby code that is executed whenever the measure
+is run by the OpenStudio CLI.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.resources_folder">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">resources_folder</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.resources_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path to the folder for resource Ruby file if it exists.</p>
+<p>This folder contains Ruby file dependencies that are used in the program_file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasure.type">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">type</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasure.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get text for the type of measure this is. This is always one of 3 values.</p>
+<ul class="simple">
+<li><p>ModelMeasure - for measures that operate on the .osm model.</p></li>
+<li><p>EnergyPlusMeasure - for measures that operate on the .idf file.</p></li>
+<li><p>ReportingMeasure - for measures that run after the simulation is finished.</p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">dragonfly_energy.measure.</span></code><code class="sig-name descname"><span class="pre">MapperMeasureArgument</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_element</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/measure.html#MapperMeasureArgument"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.measure.MeasureArgument</span></code></p>
+<p>Object representing a single mapper measure argument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>xml_element</strong> – A Python XML Element object taken from the &lt;arguments&gt; section
+of the measure.xml file.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Properties:</dt><dd><ul class="simple">
+<li><p>identifier</p></li>
+<li><p>display_name</p></li>
+<li><p>value</p></li>
+<li><p>default_value</p></li>
+<li><p>type</p></li>
+<li><p>type_text</p></li>
+<li><p>required</p></li>
+<li><p>description</p></li>
+<li><p>model_dependent</p></li>
+<li><p>valid_choices</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.ToString">
+<code class="sig-name descname"><span class="pre">ToString</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.ToString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.validate">
+<code class="sig-name descname"><span class="pre">validate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raise_exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this argument is required, check that it has a value.</p>
+<p>If this argument is not required, this method will always return True.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>raise_exception</strong> – If True, an exception will be raised if this argument
+is required and there is no value. Otherwise, False will be returned
+for this case and True will be returned if all is correct.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.PYTHON_TYPES">
+<code class="sig-name descname"><span class="pre">PYTHON_TYPES</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'Boolean':</span> <span class="pre">&lt;class</span> <span class="pre">'bool'&gt;,</span> <span class="pre">'Choice':</span> <span class="pre">&lt;class</span> <span class="pre">'str'&gt;,</span> <span class="pre">'Double':</span> <span class="pre">&lt;class</span> <span class="pre">'float'&gt;,</span> <span class="pre">'Integer':</span> <span class="pre">&lt;class</span> <span class="pre">'int'&gt;,</span> <span class="pre">'String':</span> <span class="pre">&lt;class</span> <span class="pre">'str'&gt;}</span></em><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.PYTHON_TYPES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.default_value">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">default_value</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.default_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the default value for the argument.</p>
+<p>This may be None if no default value has been included.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.description">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">description</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get text for describing what the measure does if it exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.display_name">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">display_name</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get text for the human-readable display name of the argument.</p>
+<p>This is called the “display_name” in the measure.xml file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.identifier">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">identifier</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get text for the identifier of the argument.</p>
+<p>This is also called the “name” in the measure.xml file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.model_dependent">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">model_dependent</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.model_dependent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a boolean for whether this argument is depdent on the model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.required">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">required</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.required" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a boolean for whether this argument is required to run the measure.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.type">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">type</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Python type of argument this is (eg. float, str, int).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.type_text">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">type_text</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.type_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a text string for the argument type as it appears in the measure.xml.</p>
+<p>(eg. ‘Double’, ‘String’, ‘Boolean’).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.valid_choices">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">valid_choices</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.valid_choices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of text for valid inputs for choice arguments.</p>
+<p>This will be None if the argument type is not Choice.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.measure.MapperMeasureArgument.value">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">value</span></code><a class="headerlink" href="#dragonfly_energy.measure.MapperMeasureArgument.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the value or list of values for the argument.</p>
+<p>When using a list, the length of it must match the number of buildings in
+the dragonfly Model and each value corresponds to a building under the
+Model.buildings property.</p>
+<p>If not set, this will be equal to the default_value and, if no default
+value is included for this argument, it will be None.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2021, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
